@@ -1,4 +1,6 @@
+
 flask==3.1.1
+gunicorn==23.0.0
 langchain==0.3.26
 langchain-pinecone==0.2.8
 langchain-openai==0.3.24
