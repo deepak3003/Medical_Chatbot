@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: medical-chatbot
+    env: python
+    region: singapore   # you can change to 'oregon', 'frankfurt', etc.
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    plan: free
+    envVars:
+      - key: PINECONE_API_KEY
+        sync: false
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: GROQ_API_KEY
+        sync: false
