@@ -10,12 +10,23 @@ html {
 .chat {
     margin-top: auto;
     margin-bottom: auto;
+    height: 100%;
 }
 
-.card {
+/* .card {
     height: 500px;
     border-radius: 15px !important;
     background-color: rgba(0, 0, 0, 0.4) !important;
+} */
+.card {
+    height: 100%;
+    width: 100%;
+    border-radius: 0 !important;
+    background-color: rgba(0, 0, 0, 0.4) !important;
+
+    display: flex;
+    flex-direction: column;
+    /* stack header, body, footer */
 }
 
 .contacts_body {
@@ -25,6 +36,7 @@ html {
 }
 
 .msg_card_body {
+    flex: 1;
     overflow-y: auto;
 }
 
@@ -36,6 +48,7 @@ html {
 .card-footer {
     border-radius: 0 0 15px 15px !important;
     border-top: 0 !important;
+    flex-shrink: 0;
 }
 
 .container {
